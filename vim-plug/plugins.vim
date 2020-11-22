@@ -80,8 +80,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
-    " Interactive code
-    Plug 'metakirby5/codi.vim'
     " Better tabline
     Plug 'romgrk/barbar.nvim'
     " undo time travel
@@ -102,15 +100,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Markdown Preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
     " Easily Create Gists
-    Plug 'mattn/vim-gist'
-    Plug 'mattn/webapi-vim'
+    " Plug 'mattn/vim-gist'
+    " Plug 'mattn/webapi-vim'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
     " Intuitive buffer closing
     Plug 'moll/vim-bbye'
     " Debugging
-    Plug 'puremourning/vimspector'
-    Plug 'szw/vim-maximizer'
+    " Plug 'puremourning/vimspector'
+    " Plug 'szw/vim-maximizer'
     " Neovim in Browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Rainbow brackets

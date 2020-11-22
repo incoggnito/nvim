@@ -5,6 +5,10 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
+let g:loaded_ruby_provider = 0
+let g:python3_host_prog = '~/.conda/envs/neovim/bin/python'
+let g:loaded_python_provider = 0
+
 " General Settings
 if !exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
@@ -31,7 +35,6 @@ else
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/better-whitespace.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/codi.vim
   source $HOME/.config/nvim/plug-config/vim-wiki.vim
   luafile $HOME/.config/nvim/lua/nvcodeline.lua
   luafile $HOME/.config/nvim/lua/treesitter.lua
@@ -54,13 +57,6 @@ else
   source $HOME/.config/nvim/plug-config/markdown-preview.vim
   source $HOME/.config/nvim/plug-config/neovide.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
-  " source $HOME/.config/nvim/plug-config/vimspector.vim
-  " source $HOME/.config/nvim/plug-config/sneak.vim
-  " source $HOME/.config/nvim/plug-config/rainbow.vim
-  " source $HOME/.config/nvim/plug-config/illuminate.vim
-  " source $HOME/.config/nvim/plug-config/vista.vim
-  " source $HOME/.config/nvim/plug-config/xtabline.vim
-  " source $HOME/.config/nvim/plug-config/ale.vim
 endif
 source $HOME/.config/nvim/plug-config/quickscope.vim
 

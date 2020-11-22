@@ -32,23 +32,16 @@ set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
-set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set timeoutlen=200                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
 set guifont=JetBrainsMono\ Nerd\ Font
 
-" New stuff
-" set notimeout nottimeout
-" set scrolloff=1
-" set sidescroll=1
-" set sidescrolloff=1
-" set display+=lastline
-" set backspace=eol,start,indent
-" set nostartofline
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set mmp=1300
-" set autochdir                           " Your working directory will always be the same as your working directory
-" set foldcolumn=2                        " Folding abilities
+" Highlight TODO, FIXME, NOTE, etc.
+if has("autocmd")
+  autocmd Syntax * call matchadd('Todo', '\W\zs\(TODO\|FIXME\|CHANGED\|BUG\|HACK\)')
+autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
+endif
 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

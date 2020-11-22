@@ -10,9 +10,21 @@ let g:startify_custom_header = [
 let g:startify_session_dir = '~/.config/nvim/session'
 
 
+function! s:tasks()
+python3 << EOF
+import subprocess
+import json
+import vim
+tasks = json.loads(subprocess.check_output(['task', 'export']))
+tasks = [{'line': task['description'],'cmd': ':TW ' + str(task['id'])} for task in tasks][:10]
+vim.command("let tasklist = %s"% tasks)
+EOF
+    return tasklist
+endfunction
+
 let g:startify_lists = [
+          \ { 'type': function('s:tasks'), 'header': ['   Tasks']      },
           \ { 'type': 'files',     'header': ['   Files']                        },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ { 'type': 'sessions',  'header': ['   Sessions']                     },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
           \ ]
@@ -34,9 +46,6 @@ let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
-            \ '~/Blog',
-            \ '~/Code',
-            \ '~/Pics',
             \ ]
 
 let g:startify_enable_special = 0

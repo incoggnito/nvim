@@ -1,7 +1,5 @@
 # NVCode
 
-![NVCode pic](./utils/images/nvim.png)
-
 ## Install in one command
 
 The following will install this config if you have an existing config it will move it to `~/.config/nvim.old`
@@ -13,14 +11,6 @@ bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/
 ```
 
 ## Install Neovim
-
-- Mac
-
-  ```
-  brew install --HEAD neovim # Nightly version
-
-  brew upgrade neovim --fetch-HEAD # Sometimes you need to update
-  ```
 
 - Ubuntu
 
@@ -67,8 +57,6 @@ export PATH=$HOME/.local/bin:$PATH
 ```
 
 ## Install clipboard support
-
-- On Mac pbcopy should be builtin
 
 - Ubuntu
 
@@ -136,35 +124,11 @@ Example:
 :UpdateRemotePlugins
 ```
 
-## TabNine
-
-To use TabNine enter the following in a buffer:
-
-```
-TabNine::config
-```
-
-**NOTE** This extension can take up a ton of memory
-
-## Vim Gists
-
-To use **vim-gists** you will need to configure the following:
-
-```
-git config --global github.user <username>
-```
-
 ## VSCodium & Neo Vim Extension
 
 [VSCodium](https://github.com/VSCodium/vscodium) contains build files to generate free release binaries of Microsoft's VS Code.
 
 You can install it on multiple platforms:
-
-- Mac
-
-  ```
-  brew cask install vscodium
-  ```
 
 - Arch
 
@@ -186,33 +150,20 @@ Along with some of my config files you can find in `utils/vscode_config`
 
 ## TODO
 
-- Better Documentation
-
-## CoC extensions to check out
-
-- coc-fzf-preview
-  - https://github.com/yuki-ycino/fzf-preview.vim/
-- coc-floaterm
-
-## 0.5
-
-- native lsp
-- treesitter
+- Better Documentation for Workflows
+- Firenvim does not yet work
+- Check vimtex and Pandoc
+- Check Taskwarrior workflow
+- Vimwiki Implementation
+- Remove vimspector
+- Include neoterm and ipython workflow
 
 ## LOW PRIORITY TODO
 
 If anyone reading this has any suggestions about implementing any of the following I will accept a PR, but these are not priority.
 
-- ale
-- multiple cursors
+- Remove Things i dont need
 - markdown table
 - galaxyline automatically grab colors from colorscheme
 - tpope/vim-dadbod
 - neovide
-- People asked about vimwiki I kinda hate it but maybe I'll add it
-- vimspector this is included but I don't plan on using it much
-  - can be used with jdb, pdb, gdb, etc...
-- nvim-dap and nvim-dap-virtual-text (ALL DEBUGGING IN NEOVIM IS CONFUSING AND HARD TO GET WORKING OR I'M JUST DUMB)
-- later manually link pylance
-- resize with arrows in addition to meta
-- how to support meta key on for macOS?

@@ -1,8 +1,180 @@
 {
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.vim",
-  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+  // Editor
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "first",
+  "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "JetBrainsMono NF, DejaVuSansMono NFMesloLGS NF, Hack",
+  "editor.snippetSuggestions": "bottom",
+
+  // Workbench
+  "workbench.list.automaticKeyboardNavigation": false,
+  "workbench.startupEditor": "newUntitledFile",
+
+  // VS IntelliCode
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  
+  // Python
+  "python.pythonPath": "$HOME/.miniconda/envs/pyDev/bin/python",
+  "python.languageServer": "Pylance",
+  "python.terminal.activateEnvironment": false,
+  "python.condaPath": "$HOME/.miniconda/bin/conda",
+  "python.formatting.provider": "black",
+  "python.insidersChannel": "off",
+  "python.showStartPage": false,
+
+  // Emmet
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "markdown": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+
+  // Git
+  "git.autofetch": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+
+  // Markdown
+  "markdown.marp.enableHtml": true,
+  "[markdown]": {
+      "editor.wordWrap": "on",
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+      "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+      }
+  },
+
+  // TODO Tree
+  "todo-tree.tree.showScanModeButton": false,
+
+  //Terminal
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.shellArgs.windows": [
+    "C:\\Users\\qxo1686\\Miniconda3\\Scripts\\activate.bat"],
+  
+  //Mermaid
+  "mermaid-editor.preview.theme": "dark",
+  "mermaid-editor.preview.backgroundColor": "white",
+  "mermaid-editor.generate.type": "svg",
+  
+  //VSCodeWSL
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+
+  // Color
+  "editor.tokenColorCustomizations": {
+    "[One Dark Pro]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "support.class.component.open.jsx",
+            "support.class.component.close.jsx",
+            "entity.name.function.js"
+          ],
+          "settings": {
+            "foreground": "#61afef"
+          }
+        },
+
+        {
+          "scope": [
+            "variable.other.constant.object.js",
+
+            "punctuation.section.embedded.begin.jsx",
+            "punctuation.section.embedded.end.jsx"
+          ],
+          "settings": {
+            "foreground": "#abb2bf"
+          }
+        },
+        {
+          "scope": ["punctuation.definition.tag.jsx"],
+          "settings": {
+            "foreground": "#5c6370"
+          }
+        },
+        {
+          "scope": [
+            "variable.other.readwrite.js",
+            "variable.other.property.js",
+            "variable.parameter",
+            "variable.other.object.js"
+          ],
+          "settings": {
+            "foreground": "#56b6c2"
+          }
+        },
+        {
+          "scope": ["entity.other.attribute-name.jsx"],
+          "settings": {
+            "foreground": "#e5c07b"
+          }
+        },
+        {
+          "scope": [
+            "keyword.operator.assignment.js",
+            "keyword.operator.assignment.jsx",
+            "string.unquoted.js",
+            "keyword.operator.typeof.js",
+            "meta.embedded.expression.js",
+            "constant.other.object.key.js",
+            "keyword.operator.logical.js"
+          ],
+          "settings": {
+            "foreground": "#c678dd"
+          }
+        },
+        {
+          "scope": ["variable.other.constant.object.js"],
+          "settings": {
+            "foreground": "#e06c75"
+          }
+        }
+      ]
+    }
+  },
+
+  "workbench.colorCustomizations": {
+    "[Default Dark+]": {
+      "statusBar.background": "#2E2E2E",
+      "statusBar.foreground": "#8C8C8C",
+      "statusBarItem.remoteBackground": "#2E2E2E",
+      "statusBarItem.remoteForeground": "#8C8C8C",
+      "activityBar.background": "#2E2E2E",
+      "tab.inactiveBackground": "#2E2E2E"
+    },
+    "[One Dark Pro]": {
+      "editor.background": "#1e2127",
+      "terminal.foreground": "#abb2bf",
+      "terminal.ansiBlack": "#1e2127",
+      "terminal.ansiBlue": "#61afef",
+      "terminal.ansiCyan": "#56b6c2",
+      "terminal.ansiGreen": "#98C379",
+      "terminal.ansiMagenta": "#c678dd",
+      "terminal.ansiRed": "#e06c75",
+      "terminal.ansiWhite": "#abb2bf",
+      "terminal.ansiYellow": "#d19a66",
+      "terminal.ansiBrightBlack": "#5c6370",
+      "terminal.ansiBrightBlue": "#61afef",
+      "terminal.ansiBrightCyan": "#56b6c2",
+      "terminal.ansiBrightGreen": "#98c379",
+      "terminal.ansiBrightMagenta": "#c678dd",
+      "terminal.ansiBrightRed": "#e06c75",
+      "terminal.ansiBrightWhite": "#ffffff",
+      "terminal.ansiBrightYellow": "#d19a66"
+    }
+  },
+
+  // Which Keys
   "whichkey.sortOrder": "alphabetically",
   "whichkey.delay": 0,
   "whichkey.bindings": [
@@ -967,162 +1139,6 @@
       "command": "workbench.action.toggleZenMode"
     }
   ],
-  "workbench.editor.showTabs": true,
-  "sync.gist": "939951904a077b97f8001bc35f6b5948",
-  "gitlens.hovers.currentLine.over": "line",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.pythonPath": "/home/chris/.miniconda/envs/ds/bin/python",
-  "java.semanticHighlighting.enabled": true,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chris/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "workbench.list.automaticKeyboardNavigation": false,
-  "oneDarkPro.editorTheme": "onedarkPro",
-  "python.languageServer": "Pylance",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "kite.showWelcomeNotificationOnStartup": false,
-  "python.terminal.activateEnvironment": false,
-  "editor.cursorBlinking": "solid",
-  "editor.fontFamily": "FiraCode Nerd Font Mono, Hack, Menlo, Monaco, 'Courier New', monospace",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "terminal.external.osxExec": "iTerm.app",
-  "editor.minimap.enabled": false,
-  "workbench.activityBar.visible": true,
-  "leetcode.workspaceFolder": "/Users/chris/Repos/leetcode",
-  "leetcode.defaultLanguage": "javascript",
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.commentDescription": false,
-  "window.zoomLevel": 2,
-  "window.menuBarVisibility": "toggle",
-  "python.dataScience.alwaysTrustNotebooks": true,
-  "python.condaPath": "$HOME/.miniconda/bin/conda",
-  "python.formatting.provider": "black",
-  "python.insidersChannel": "off",
-  "terminal.integrated.shell.linux": "/bin/zsh",
-  "terminal.external.linuxExec": "/usr/bin/alacritty",
-  "code-runner.executorMap": {
-    "python": "$pythonPath $fileName",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
-  "editor.tokenColorCustomizations": {
-    "[One Dark Pro]": {
-      "textMateRules": [
-        {
-          "scope": [
-            "support.class.component.open.jsx",
-            "support.class.component.close.jsx",
-            "entity.name.function.js"
-          ],
-          "settings": {
-            "foreground": "#61afef"
-          }
-        },
-
-        {
-          "scope": [
-            "variable.other.constant.object.js",
-
-            "punctuation.section.embedded.begin.jsx",
-            "punctuation.section.embedded.end.jsx"
-          ],
-          "settings": {
-            "foreground": "#abb2bf"
-          }
-        },
-        {
-          "scope": ["punctuation.definition.tag.jsx"],
-          "settings": {
-            "foreground": "#5c6370"
-          }
-        },
-        {
-          "scope": [
-            "variable.other.readwrite.js",
-            "variable.other.property.js",
-            "variable.parameter",
-            "variable.other.object.js"
-          ],
-          "settings": {
-            "foreground": "#56b6c2"
-          }
-        },
-        {
-          "scope": ["entity.other.attribute-name.jsx"],
-          "settings": {
-            "foreground": "#e5c07b"
-          }
-        },
-        {
-          "scope": [
-            "keyword.operator.assignment.js",
-            "keyword.operator.assignment.jsx",
-            "string.unquoted.js",
-            "keyword.operator.typeof.js",
-            "meta.embedded.expression.js",
-            "constant.other.object.key.js",
-            "keyword.operator.logical.js"
-          ],
-          "settings": {
-            "foreground": "#c678dd"
-          }
-        },
-        {
-          "scope": ["variable.other.constant.object.js"],
-          "settings": {
-            "foreground": "#e06c75"
-          }
-        }
-      ]
-    }
-  },
-
-  "workbench.colorCustomizations": {
-    "[Default Dark+]": {
-      "statusBar.background": "#2E2E2E",
-      "statusBar.foreground": "#8C8C8C",
-      "statusBarItem.remoteBackground": "#2E2E2E",
-      "statusBarItem.remoteForeground": "#8C8C8C",
-      "activityBar.background": "#2E2E2E",
-      "tab.inactiveBackground": "#2E2E2E"
-    },
-    "[One Dark Pro]": {
-      "editor.background": "#1e2127",
-      "terminal.foreground": "#abb2bf",
-      "terminal.ansiBlack": "#1e2127",
-      "terminal.ansiBlue": "#61afef",
-      "terminal.ansiCyan": "#56b6c2",
-      "terminal.ansiGreen": "#98C379",
-      "terminal.ansiMagenta": "#c678dd",
-      "terminal.ansiRed": "#e06c75",
-      "terminal.ansiWhite": "#abb2bf",
-      "terminal.ansiYellow": "#d19a66",
-      "terminal.ansiBrightBlack": "#5c6370",
-      "terminal.ansiBrightBlue": "#61afef",
-      "terminal.ansiBrightCyan": "#56b6c2",
-      "terminal.ansiBrightGreen": "#98c379",
-      "terminal.ansiBrightMagenta": "#c678dd",
-      "terminal.ansiBrightRed": "#e06c75",
-      "terminal.ansiBrightWhite": "#ffffff",
-      "terminal.ansiBrightYellow": "#d19a66"
-    }
-  },
-  "gitlens.advanced.telemetry.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "emmet.showSuggestionsAsSnippets": true,
-  "material-icon-theme.showWelcomeMessage": false,
-  "gitlens.codeLens.enabled": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "git.autofetch": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "python.showStartPage": false,
-  "editor.snippetSuggestions": "bottom"
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.quickSuggestions": null,
 }
